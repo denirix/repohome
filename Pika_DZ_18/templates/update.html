@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <style>
+    table, th, td {
+      border:1px solid black;
+    }
+    td {text-align: center;}
+    </style>
+<head>
+  <title>Update Orders</title>
+</head>
+
+<body>
+  <div>
+    <h1>Update Order</h1>
+        <form action="/orders/update" method="post">
+            <input value={{data.id}} type="text" id="id" name="id" readonly><br>
+            <input value={{data.name}} type="text" id="name" name="name"><br>
+            <input value={{data.cost}} type="text" id="cost" name="cost"><br>
+            <input type="submit" type="Submit">
+        </form>
+  </div>
+</body>
+
+</html>

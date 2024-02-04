@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container"></div>
+    <h1>Orders</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Order id</th>
+                <th>Order name</th>
+                <th>Order cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.cost }}</td>
+                <td><form action="/orders/update" method="get">
+                    <button name="id" type="submit" value={{item.id}}>Update</button>
+                    </form></td>
+                <td><form action="/orders/delete" method="post">
+                    <button name="id" type="submit" value={{item.id}}>Delete</button>
+                    </form></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form action="/orders/add" method="get">
+        <button type="submit">Add order</button>
+        </form>
+</body>
+</html>

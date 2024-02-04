@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <style>
+    table, th, td {
+      border:1px solid black;
+    }
+    td {text-align: center;}
+    </style>
+<head>
+  <title>Add Order</title>
+</head>
+
+<body>
+  <div>
+    <h1>Add Order</h1>
+        <form action="/orders/add" method="post">
+            <input type="text" id="client_id" name="client_id" placeholder="client id"><br>
+            <input type="text" id="name" name="name" placeholder="name"><br>
+            <input type="text" id="cost" name="cost" placeholder="cost"><br>
+            <input type="submit" type="Submit">
+        </form>
+  </div>
+</body>
+
+</html>
